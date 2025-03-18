@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="all"></div>
+    <div class="color">
+        <div class="red"></div>
+        <div class="green"></div>
+        <div class="blue"></div>
+    </div>
+</body>
+
+</html>
+<script>
+    let all = document.querySelector(".all")
+    for (let i = 0; i < 16; i++) {
+        for (let l = 0; l < 16; l++) {
+            let div = document.createElement("div")
+            div.classList.add("block")
+            div.addEventListener(("click"), () => {
+                div.style.background = aaa
+            })
+            all.appendChild(div)
+            
+        }
+    }
+    let red = document.querySelector(".red")
+    let green = document.querySelector(".green")
+    let blue = document.querySelector(".blue")
+    let aaa = "black"
+    red.addEventListener(("click"), () => {
+        aaa = "red"
+    })
+    green.addEventListener(("click"), () => {
+        aaa = "green"
+    })
+    blue.addEventListener(("click"), () => {
+        aaa = "blue"
+    })
+
+</script>
+<style>
+    .all {
+        width: 672px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .block {
+        width: 40px;
+        height: 40px;
+        border: solid 1px black;
+    }
+
+    .red {
+        width: 40px;
+        height: 40px;
+        background-color: red;
+        border-radius: 50%;
+        border: solid 3px black;
+    }
+
+    .green {
+        width: 40px;
+        height: 40px;
+        background-color: green;
+        border-radius: 50%;
+        border: solid 3px black;
+    }
+
+    .blue {
+        width: 40px;
+        height: 40px;
+        background-color: blue;
+        border-radius: 50%;
+        border: solid 3px black;
+    }
+
+    .color {
+        display: flex;
+    }
+</style>
