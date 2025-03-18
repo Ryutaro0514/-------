@@ -1,0 +1,14 @@
+a {
+    color: black;
+}
+a[href^="web"] {
+    color: red;
+  }
+  
+  a[href^="design"] {
+    color: blue;
+  }
+  a[href^="top"]{
+    color: green;
+  }
+  

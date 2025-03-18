@@ -1,0 +1,7 @@
+.en{
+    width: 800px;
+    height: 800px;
+    border: solid black 3px;
+    border-radius: 100%;
+    background-image: conic-gradient(blue 0% 40% ,yellow 40% 60% , red 60% 100%);
+}

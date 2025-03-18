@@ -1,0 +1,27 @@
+.kaitenn {
+    width: 200px;
+    height: 200px;
+
+    
+    position: relative;
+    animation: flip 2s infinite;
+    backface-visibility: hidden;
+}
+
+.omote,.ura {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, red, blue);
+    position: absolute;
+}
+.omote{
+    z-index: 1;
+}
+.ura{
+    transform: rotateY(180deg);
+}
+@keyframes flip{
+    50%{
+        transform: rotateY(180deg);   
+    }
+}

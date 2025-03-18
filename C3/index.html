@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <canvas width="400" height="300">
+
+    </canvas>
+    <div class="all">
+        <button class="btnr">ボタン赤</button>
+        <button class="btnb">ボタン青</button>
+        <button class="btng">ボタン緑</button>
+        <button class="btnc">クリア</button>
+        <button class="btnho">細い</button>
+        <button class="btnhu">太い</button>
+    </div>
+</body>
+
+</html>
+
+<script>
+    const canvas = document.querySelector("canvas")
+    const ctx = canvas.getContext("2d")
+    const btnr = document.querySelector(".btnr")
+    const btnb = document.querySelector(".btnb")
+    const btng = document.querySelector(".btng")
+    const btnc = document.querySelector(".btnc")
+    const btnho = document.querySelector(".btnho")
+    const btnhu = document.querySelector(".btnhu")
+    let color = "black"
+    let hoso = 1
+    let endX = 0
+    let endY = 0
+    let startX = 0
+    let startY = 0
+    ctx.lineWidth = 1;
+    let isDragging = false
+    canvas.addEventListener("mousedown", (e) => {
+        isDragging = true
+        startX = e.clientX
+        startY = e.clientY
+    })
+    canvas.addEventListener("mouseup", () => {
+        isDragging = false
+    })
+    canvas.addEventListener("mousemove", (e) => {
+        if (isDragging) {
+            ctx.beginPath()
+            endX = e.clientX;
+            endY = e.clientY;
+            ctx.moveTo(startX, startY)
+            ctx.lineTo(endX, endY)
+            ctx.strokeStyle = color
+            ctx.lineWidth = hoso;
+            ctx.stroke()
+            console.log("aaaa");
+            startX = endX
+            startY = endY
+            ctx.closePath
+        }
+
+    })
+    btnr.addEventListener("click", (e) => {
+        color = "red"
+
+        console.log("red");
+
+    })
+    btnb.addEventListener("click", (e) => {
+        color = "blue"
+
+        console.log("blue");
+    })
+    btng.addEventListener("click", (e) => {
+        color = "green"
+
+        console.log("green");
+    })
+    const drow = () => {
+        ctx.fillStyle = "white"
+        ctx.fillRect(0, 0, 400, 300)
+    }
+    btnc.addEventListener("click", (e) => {
+        ctx.fillStyle = "white"
+        ctx.fillRect(0, 0, 400, 300)
+        drow()
+        console.log("clear");
+    })
+    btnho.addEventListener("click", (e) => {
+        hoso = 1;
+    })
+    btnhu.addEventListener("click", (e) => {
+        hoso = 5;
+    })
+
+    drow()
+
+</script>

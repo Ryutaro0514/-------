@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="toke">
+        <div class="hari"></div>
+    </div>
+
+    <button class="sta">すたーと</button>
+    <button class="sto">すとっぷ</button>
+    <button class="ris">リセット</button>
+</body>
+
+</html>
+<script>
+    const sta = document.querySelector(".sta")
+    const sto = document.querySelector(".sto")
+    const ris = document.querySelector(".ris")
+    const hari = document.querySelector(".hari")
+
+    let time;
+    let interval = 0
+    let flag = false
+    sta.addEventListener("click", () => {
+       if(flag) return;
+        time = setInterval(() => {
+            hari.style.rotate = interval + "deg"
+            interval = interval + 6
+        }, 1000);
+        flag = true
+    })
+    sto.addEventListener("click", () => {
+        clearInterval(time)
+        flag = false
+    })
+    ris.addEventListener("click", () => {
+        clearInterval(time)
+        interval = 0
+        hari.style.rotate = interval + "deg"
+        flag = false
+    })
+</script>

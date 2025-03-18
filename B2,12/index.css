@@ -1,0 +1,23 @@
+.maru{
+
+    width: 500px;
+    height: 500px;
+    background-color: yellow;
+    border: solid black 2px;
+    animation: maru 4s infinite;
+}
+.all{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@keyframes maru {
+    50%{
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        background-color: red;
+    }
+}

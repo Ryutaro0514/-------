@@ -1,0 +1,11 @@
+/* .torikesi{
+    text-decoration: line-through;
+} */
+.text {
+    text-decoration: none;
+}
+
+input[type="checkbox"]:checked + .text {
+    text-decoration: line-through;
+    transform: rotateY('angle');
+}

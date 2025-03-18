@@ -1,0 +1,9 @@
+canvas{
+    border: solid 1px black;
+}
+.all{
+    display: flex;
+}
+button[class*="btn"]{
+    margin-left: 20px;
+}

@@ -1,0 +1,13 @@
+.block{
+    width: 100px;
+    height: 100px;
+    border: solid black 1px;
+}
+.all{
+
+}
+@media (width >= 480px){
+    .all{
+        display: flex;
+    }
+}

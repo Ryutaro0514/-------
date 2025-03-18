@@ -1,0 +1,26 @@
+label{
+    width: 400px;
+    height: 200px;
+    background-color: aqua;
+    display: flex;
+    border-radius: 10000000px;
+    align-items: center;
+}
+.btn{
+    background-color: blue;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin: 10px;
+}
+input{
+    display: none;
+}
+input:checked~label>.btn{
+    background-color: aqua;
+}
+input:checked~label{
+    background-color: blue;
+    display: flex;
+    justify-content: right;
+}

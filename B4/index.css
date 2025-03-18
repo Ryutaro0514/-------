@@ -1,0 +1,71 @@
+.blue {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    border-radius: 100%;
+    animation: left 8s infinite;
+}
+
+.yellow {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border-radius: 100%;
+    animation: center 8s infinite;
+}
+
+.red {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 100%;
+    animation: right 8s infinite;
+}
+.singou {
+    display: flex;
+}
+@keyframes left {
+    49.999%{
+        opacity: 100%;
+    }
+    50%{
+        opacity: 20%;
+    }
+    100%{
+        opacity: 20%;
+    }
+}
+@keyframes center {
+    0%{
+        opacity: 20%;
+    }
+    49.999%{
+        opacity: 20%;
+    }
+    50%{
+        opacity: 100%;
+    }
+    62.5%{
+        opacity: 100%;
+    }
+    62.5001%{
+        opacity: 20%;
+    }
+    100%{
+        opacity: 20%;
+    }
+}
+@keyframes right {
+    0%{
+        opacity: 20%;
+    }
+    62.4%{
+        opacity: 20%;
+    }
+    62.5%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}

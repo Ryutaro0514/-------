@@ -1,0 +1,12 @@
+.cercle{
+    width: 400px;
+    height: 400px;
+    background-color: aquamarine;
+    border-radius: 50%;
+    animation: ball 1s infinite;
+}
+@keyframes ball{
+    50%{
+        margin-top: 300px;
+    }
+}

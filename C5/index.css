@@ -1,0 +1,17 @@
+.toke {
+    border: solid 1px black;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.hari {
+    position: absolute;
+    background-color: black;
+    width: 3px;
+    height: 250px;
+    left: 50%;
+    transform-origin:  bottom,;
+    
+}

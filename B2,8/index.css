@@ -1,0 +1,10 @@
+div:hover{
+    width: 400px;
+    height: 100%;
+    filter: grayscale(0%);
+}
+div{
+    width: 400px;
+    height: 100%;
+    filter: grayscale(100%);
+}

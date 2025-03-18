@@ -1,0 +1,36 @@
+label {
+    position: relative;
+    display: block;
+    width: 400px;
+}
+
+input {
+    display: none;
+}
+
+.bg {
+    width: 400px;
+    height: 200px;
+    background-color: cyan;
+    border-radius: 999999px;
+}
+
+.circle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 180px;
+    height: 180px;
+    background-color: blue;
+    border-radius: 50%;
+}
+
+input:checked + .circle {
+    left: initial;
+    right: 10px;
+    background-color: cyan;
+}
+
+input:checked ~ .bg {
+    background-color: blue;
+}

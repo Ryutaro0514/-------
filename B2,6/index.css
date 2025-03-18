@@ -1,0 +1,21 @@
+.sannkaku{
+    width: 0px;
+    height: 0px;
+    border-top: solid 0px transparent;
+    border-right: solid 100px transparent;
+    border-left: solid 100px transparent;
+    border-bottom: solid 171px red;
+    animation: animation 2s infinite;
+}
+@keyframes animation{
+    50%{
+        border :solid 100px yellow;
+    }
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
